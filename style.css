@@ -1,6 +1,15 @@
 /* nejsme vcerejsi, pouzivame moderni box model */
-html { box-sizing: border-box; }
-*, ::after, ::before { box-sizing: inherit; }
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+ ::after,
+ ::before {
+    box-sizing: inherit;
+}
+
 
 /*
  BARVY
@@ -24,10 +33,101 @@ body {
 }
 
 .obal {
-    width: 960px; /* obsah stránky je omezený do pruhu širokého 960px */
-    margin: 0 auto; /* pruh je na stránce vycentrovaný */
+    width: 960px;
+    /* obsah stránky je omezený do pruhu širokého 960px */
+    margin: 0 auto;
+    /* pruh je na stránce vycentrovaný */
     background: white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
+
 /* ----- zde začni psát vlastní CSS ----- */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flexbox;
+    justify-content: flex-start;
+    padding: 15px;
+}
+
+nav a {
+    padding: 15px;
+    text-decoration: none;
+    color: #25133d;
+}
+
+.hero {
+    height: 380px;
+    width: 960px;
+    background-image: url("images/pozadi.jpg");
+    background-color: #25133d;
+    background-size: cover;
+    display: flex;
+}
+
+.hero-left {
+    position: static;
+    width: 600px;
+    padding: 30px 0 30px 50px;
+}
+
+h1 {
+    color: white;
+    font-size: 80px;
+    font-weight: 400;
+}
+
+h2 {
+    color: white;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.button-menu {
+    display: flex;
+    align-content: flex-start;
+    padding: 25px 0 25px 0;
+}
+
+.button {
+    padding: 15px;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-right: 50px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #25133d;
+    opacity: 0.8;
+}
+
+.button a {
+    text-decoration: none;
+    color: white;
+}
+
+.hero-right {
+    position: static;
+    width: 360px;
+    padding-top: 24px;
+}
+
+.menu {
+    display: flex;
+    padding: 50px;
+    text-align: center;
+}
+
+.menu-content {
+    padding: 15px;
+}
+
+h3 {
+    padding: 10px 0 10px 0;
+}
